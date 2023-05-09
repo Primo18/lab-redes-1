@@ -5,13 +5,10 @@ static void receive_file(const char *save_dir, int client_sock)
     // Recibir el nombre del archivo que el cliente desea enviar
     char filename[256];
     tcp_recv(client_sock, filename, sizeof(filename));
-    printf("Solicitando archivo: %s\n", filename);
-
-    // Recibir el tamaño del archivo que viene como string que el cliente desea enviar
-    char file_size_str[32];
-    tcp_recv(client_sock, file_size_str, sizeof(file_size_str));
+    char *header = strtok(filename, ":");
+    char *file_size_str = strtok(NULL, ":");
     size_t file_size = atoi(file_size_str);
-    printf("Tamaño del archivo: %zu bytes\n", file_size);
+    printf("Solicitando archivo: %s (%zu bytes)\n", header, file_size);
 
     // Recibir el archivo y Guardar archivo
     char filepath[512];

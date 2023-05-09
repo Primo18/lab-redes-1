@@ -19,13 +19,10 @@ static void send_file(const char *filepath, int sock)
     fseek(fp, 0, SEEK_SET);
     printf("Enviando archivo: %s (%zu bytes)\n", FILENAME, file_size);
 
-    // Enviar nombre del archivo
-    tcp_send(sock, FILENAME, strlen(FILENAME) + 1);
-
-    // Enviar tamaño del archivo como string
-    char file_size_str[32];
-    snprintf(file_size_str, sizeof(file_size_str), "%zu", file_size);
-    tcp_send(sock, file_size_str, strlen(file_size_str) + 1);
+    // Enviar nombre del archivo y tamaño en una sola llamada a tcp_send()
+    char header[64];
+    snprintf(header, sizeof(header), "%s:%zu", FILENAME, file_size);
+    tcp_send(sock, header, strlen(header) + 1);
 
     // Cerrar archivo
     fclose(fp);
