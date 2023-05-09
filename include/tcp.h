@@ -9,6 +9,7 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 #include <fcntl.h>
+#include <ncurses.h>
 
 // Funciones de servidor
 // =====================

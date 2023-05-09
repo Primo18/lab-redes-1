@@ -25,11 +25,11 @@ static void send_file(const char *filepath, int sock)
     // Enviar tamaño del archivo
     tcp_send(sock, &file_size, sizeof(file_size));
 
-    // Enviar archivo
-    tcp_sendfile(sock, filepath);
-
     // Cerrar archivo
     fclose(fp);
+
+    // Enviar archivo
+    tcp_sendfile(sock, filepath);
 }
 
 int main(void)

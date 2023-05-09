@@ -123,6 +123,13 @@ void tcp_sendfile(int sock, const char *file)
         }
 
         bytes_left -= read_bytes;
+
+        // Muestra el porcentaje de bytes enviados
+        printf("\r[%3.2f%%] Enviando archivo...", 100.0 * (size - bytes_left) / size);
+        fflush(stdout);
+
+        // Simula un retraso de 1 segundo
+        sleep(1);
     }
 
     if (read_bytes == -1)
@@ -133,6 +140,9 @@ void tcp_sendfile(int sock, const char *file)
     }
 
     fclose(fp);
+
+    // Muestra un mensaje de finalización
+    printf("\nArchivo enviado con éxito.\n");
 }
 
 // Recibe un archivo por el socket indicado
@@ -158,6 +168,13 @@ void tcp_recvfile(int sock, const char *file, size_t size)
         }
 
         bytes_left -= read_bytes;
+
+        // Muestra el porcentaje de bytes recibidos
+        printf("\r[%3.2f%%] Recibiendo archivo...", 100.0 * (size - bytes_left) / size);
+        fflush(stdout);
+
+        // Simula un retraso de 1 segundo
+        sleep(1);
     }
 
     if (read_bytes == -1)
@@ -168,6 +185,9 @@ void tcp_recvfile(int sock, const char *file, size_t size)
     }
 
     fclose(fp);
+
+    // Muestra un mensaje de finalización
+    printf("\nArchivo recibido con éxito.\n");
 }
 
 void tcp_close(int sock)
