@@ -1,0 +1,4 @@
+/home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles/server.dir
+/home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles/client.dir
+/home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles/edit_cache.dir
+/home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles/rebuild_cache.dir

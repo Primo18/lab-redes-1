@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/kali/Desktop/redes/lab-redes-1/build",
+  "command": "/usr/bin/cc  -I/home/kali/Desktop/redes/lab-redes-1/include -std=gnu11 -o CMakeFiles/server.dir/src/server.c.o -c /home/kali/Desktop/redes/lab-redes-1/src/server.c",
+  "file": "/home/kali/Desktop/redes/lab-redes-1/src/server.c"
+},
+{
+  "directory": "/home/kali/Desktop/redes/lab-redes-1/build",
+  "command": "/usr/bin/cc  -I/home/kali/Desktop/redes/lab-redes-1/include -std=gnu11 -o CMakeFiles/server.dir/src/tcp.c.o -c /home/kali/Desktop/redes/lab-redes-1/src/tcp.c",
+  "file": "/home/kali/Desktop/redes/lab-redes-1/src/tcp.c"
+},
+{
+  "directory": "/home/kali/Desktop/redes/lab-redes-1/build",
+  "command": "/usr/bin/cc  -I/home/kali/Desktop/redes/lab-redes-1/include -std=gnu11 -o CMakeFiles/client.dir/src/client.c.o -c /home/kali/Desktop/redes/lab-redes-1/src/client.c",
+  "file": "/home/kali/Desktop/redes/lab-redes-1/src/client.c"
+},
+{
+  "directory": "/home/kali/Desktop/redes/lab-redes-1/build",
+  "command": "/usr/bin/cc  -I/home/kali/Desktop/redes/lab-redes-1/include -std=gnu11 -o CMakeFiles/client.dir/src/tcp.c.o -c /home/kali/Desktop/redes/lab-redes-1/src/tcp.c",
+  "file": "/home/kali/Desktop/redes/lab-redes-1/src/tcp.c"
+}
+]
