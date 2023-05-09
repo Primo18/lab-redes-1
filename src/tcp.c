@@ -148,7 +148,7 @@ void tcp_sendfile(int sock, const char *file)
 // Recibe un archivo por el socket indicado
 void tcp_recvfile(int sock, const char *file, size_t size)
 {
-    FILE *fp = fopen(file, "wb");
+    FILE *fp = fopen(file, "w");
     if (fp == NULL)
     {
         perror("Error al abrir archivo");
