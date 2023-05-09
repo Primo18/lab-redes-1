@@ -6,7 +6,7 @@
 static void send_file(const char *filepath, int sock)
 {
     // Abrir archivo para lectura
-    FILE *fp = fopen(filepath, "rb");
+    FILE *fp = fopen(filepath, "r");
     if (!fp)
     {
         fprintf(stderr, "Error al abrir el archivo \n");
@@ -22,8 +22,10 @@ static void send_file(const char *filepath, int sock)
     // Enviar nombre del archivo
     tcp_send(sock, FILENAME, strlen(FILENAME) + 1);
 
-    // Enviar tamaño del archivo
-    tcp_send(sock, &file_size, sizeof(file_size));
+    // Enviar tamaño del archivo como string
+    char file_size_str[32];
+    snprintf(file_size_str, sizeof(file_size_str), "%zu", file_size);
+    tcp_send(sock, file_size_str, strlen(file_size_str) + 1);
 
     // Cerrar archivo
     fclose(fp);
