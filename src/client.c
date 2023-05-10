@@ -1,6 +1,6 @@
 #include "tcp.h"
 
-#define FILENAME "img.jpg"
+#define FILENAME "archivo.txt"
 #define SERVER_PORT 10000
 
 static void send_file(const char *filepath, int sock)
