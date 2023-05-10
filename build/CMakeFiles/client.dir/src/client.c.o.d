@@ -80,9 +80,4 @@ CMakeFiles/client.dir/src/client.c.o: \
  /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
- /usr/include/x86_64-linux-gnu/bits/struct_stat.h /usr/include/curses.h \
- /usr/include/ncurses_dll.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h /usr/include/stdint.h \
- /usr/include/x86_64-linux-gnu/bits/wchar.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/stdbool.h /usr/include/unctrl.h \
- /usr/include/curses.h
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h

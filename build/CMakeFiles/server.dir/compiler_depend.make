@@ -92,15 +92,7 @@ CMakeFiles/server.dir/src/server.c.o: /home/kali/Desktop/redes/lab-redes-1/src/s
   /usr/include/x86_64-linux-gnu/bits/fcntl.h \
   /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
   /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  /usr/include/curses.h \
-  /usr/include/ncurses_dll.h \
-  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdbool.h \
-  /usr/include/unctrl.h \
-  /usr/include/curses.h
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h
 
 CMakeFiles/server.dir/src/tcp.c.o: /home/kali/Desktop/redes/lab-redes-1/src/tcp.c \
   /usr/include/stdc-predef.h \
@@ -193,26 +185,10 @@ CMakeFiles/server.dir/src/tcp.c.o: /home/kali/Desktop/redes/lab-redes-1/src/tcp.
   /usr/include/x86_64-linux-gnu/bits/fcntl.h \
   /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
   /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  /usr/include/curses.h \
-  /usr/include/ncurses_dll.h \
-  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdbool.h \
-  /usr/include/unctrl.h \
-  /usr/include/curses.h
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h
 
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /home/kali/Desktop/redes/lab-redes-1/src/tcp.c:
-
-/usr/include/stdint.h:
-
-/usr/include/curses.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h:
 
 /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
 
@@ -264,8 +240,6 @@ CMakeFiles/server.dir/src/tcp.c.o: /home/kali/Desktop/redes/lab-redes-1/src/tcp.
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
-/usr/include/ncurses_dll.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
@@ -277,8 +251,6 @@ CMakeFiles/server.dir/src/tcp.c.o: /home/kali/Desktop/redes/lab-redes-1/src/tcp.
 /usr/include/endian.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
-/usr/include/unctrl.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
@@ -325,8 +297,6 @@ CMakeFiles/server.dir/src/tcp.c.o: /home/kali/Desktop/redes/lab-redes-1/src/tcp.
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/12/include/stdbool.h:
 
 /usr/include/x86_64-linux-gnu/bits/in.h:
 
