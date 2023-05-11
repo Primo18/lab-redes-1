@@ -1,4 +1,5 @@
 #include "tcp.h"
+#define BUFFER_SIZE 4096
 
 void tcp_server_create(struct tcp_server_t *server, int port)
 {
@@ -100,43 +101,62 @@ void tcp_recv(int sock, void *data, size_t size)
 void tcp_sendfile(int sock, const char *file)
 {
     FILE *fp = fopen(file, "rb");
-    if (fp == NULL)
+    if (!fp)
     {
         perror("Error al abrir archivo");
         return;
     }
 
+    // Obtener el tamaño del archivo
     fseek(fp, 0, SEEK_END);
     size_t size = ftell(fp);
     rewind(fp);
 
-    char buffer[4096];
-    size_t bytes_left = size;
-    size_t read_bytes = 0;
-    while (bytes_left > 0 && (read_bytes = fread(buffer, sizeof(char), sizeof(buffer), fp)) > 0)
+    // Preparar el búfer para enviar datos
+    char buffer[BUFFER_SIZE];
+    size_t bytes_sent = 0;
+
+    // Leer y enviar el archivo por partes
+    while (bytes_sent < size)
     {
-        if (send(sock, buffer, read_bytes, 0) != read_bytes)
+        size_t bytes_to_send = sizeof(buffer);
+        if (bytes_sent + bytes_to_send > size)
+        {
+            bytes_to_send = size - bytes_sent;
+        }
+
+        size_t bytes_read = fread(buffer, sizeof(char), bytes_to_send, fp);
+        if (bytes_read <= 0)
+        {
+            if (bytes_read == 0)
+            {
+                printf("\nError: Archivo vacío\n");
+            }
+            else
+            {
+                perror("Error al leer archivo");
+            }
+            fclose(fp);
+            return;
+        }
+
+        // Enviar los datos por el socket
+        ssize_t bytes_sent_now = send(sock, buffer, bytes_read, 0);
+        if (bytes_sent_now == -1 || bytes_sent_now != bytes_read)
         {
             perror("Error al enviar datos");
             fclose(fp);
             return;
         }
 
-        bytes_left -= read_bytes;
+        bytes_sent += bytes_read;
 
         // Muestra el porcentaje de bytes enviados
-        printf("\r[%3.2f%%] Enviando archivo...", 100.0 * (size - bytes_left) / size);
+        printf("\r[%3.2f%%] Enviando archivo...", 100.0 * bytes_sent / size);
         fflush(stdout);
 
         // Simula un retraso de 1 segundo
         sleep(1);
-    }
-
-    if (read_bytes == -1)
-    {
-        perror("Error al leer archivo");
-        fclose(fp);
-        return;
     }
 
     fclose(fp);
@@ -155,38 +175,46 @@ void tcp_recvfile(int sock, const char *file, size_t size)
         return;
     }
 
-    char buffer[4096];
+    char buffer[BUFFER_SIZE];
     size_t bytes_left = size;
-    size_t read_bytes = 0;
-    while (bytes_left > 0 && (read_bytes = recv(sock, buffer, sizeof(buffer), 0)) > 0)
+
+    while (bytes_left > 0)
     {
-        if (fwrite(buffer, sizeof(char), read_bytes, fp) != read_bytes)
+        size_t bytes_to_read = BUFFER_SIZE;
+        if (bytes_left < BUFFER_SIZE)
+        {
+            bytes_to_read = bytes_left;
+        }
+
+        ssize_t bytes_read = recv(sock, buffer, bytes_to_read, 0);
+        if (bytes_read == -1)
+        {
+            perror("Error al recibir datos");
+            fclose(fp);
+            return;
+        }
+        if (bytes_read == 0)
+        {
+            printf("\nConexión cerrada por el servidor\n");
+            fclose(fp);
+            return;
+        }
+
+        size_t bytes_written = fwrite(buffer, sizeof(char), bytes_read, fp);
+        if (bytes_written != bytes_read)
         {
             perror("Error al escribir archivo");
             fclose(fp);
             return;
         }
 
-        bytes_left -= read_bytes;
-
-        // Muestra el porcentaje de bytes recibidos
+        bytes_left -= bytes_written;
         printf("\r[%3.2f%%] Recibiendo archivo...", 100.0 * (size - bytes_left) / size);
         fflush(stdout);
-
-        // Simula un retraso de 1 segundo
         sleep(1);
     }
 
-    if (read_bytes == -1)
-    {
-        perror("Error al recibir datos");
-        fclose(fp);
-        return;
-    }
-
     fclose(fp);
-
-    // Muestra un mensaje de finalización
     printf("\nArchivo recibido con éxito.\n");
 }
 

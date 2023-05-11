@@ -92,7 +92,13 @@ CMakeFiles/server.dir/src/server.c.o: /home/kali/Desktop/redes/lab-redes-1/src/s
   /usr/include/x86_64-linux-gnu/bits/fcntl.h \
   /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
   /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h
 
 CMakeFiles/server.dir/src/tcp.c.o: /home/kali/Desktop/redes/lab-redes-1/src/tcp.c \
   /usr/include/stdc-predef.h \
@@ -185,12 +191,28 @@ CMakeFiles/server.dir/src/tcp.c.o: /home/kali/Desktop/redes/lab-redes-1/src/tcp.
   /usr/include/x86_64-linux-gnu/bits/fcntl.h \
   /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
   /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h
 
 
 /home/kali/Desktop/redes/lab-redes-1/src/tcp.c:
 
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/include/errno.h:
+
 /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
+
+/usr/include/linux/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/fcntl.h:
 
@@ -203,6 +225,8 @@ CMakeFiles/server.dir/src/tcp.c.o: /home/kali/Desktop/redes/lab-redes-1/src/tcp.
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
 /usr/include/unistd.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 

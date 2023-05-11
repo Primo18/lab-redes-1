@@ -1,12 +1,12 @@
 #include "tcp.h"
 
-#define FILENAME "archivo.txt"
+#define FILENAME "paisaje.jpg"
 #define SERVER_PORT 10000
 
 static void send_file(const char *filepath, int sock)
 {
     // Abrir archivo para lectura
-    FILE *fp = fopen(filepath, "r");
+    FILE *fp = fopen(filepath, "rb");
     if (!fp)
     {
         fprintf(stderr, "Error al abrir el archivo \n");
@@ -19,13 +19,13 @@ static void send_file(const char *filepath, int sock)
     fseek(fp, 0, SEEK_SET);
     printf("Enviando archivo: %s (%zu bytes)\n", FILENAME, file_size);
 
+    // Cerrar archivo
+    fclose(fp);
+
     // Enviar nombre del archivo y tamaño en una sola llamada a tcp_send()
     char header[64];
     snprintf(header, sizeof(header), "%s:%zu", FILENAME, file_size);
     tcp_send(sock, header, strlen(header) + 1);
-
-    // Cerrar archivo
-    fclose(fp);
 
     // Enviar archivo
     tcp_sendfile(sock, filepath);
@@ -35,7 +35,7 @@ int main(void)
 {
     // Conectarse al servidor
     struct tcp_client_t client;
-    tcp_client_connect(&client, "localhost", SERVER_PORT);
+    tcp_client_connect(&client, "127.0.0.1", SERVER_PORT);
 
     // Directorio donde se guardan los archivos a enviar
     const char *save_dir = "../archivos-cliente/";

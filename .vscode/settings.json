@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "in.h": "c",
-        "tcp.h": "c"
+        "tcp.h": "c",
+        "cerrno": "c"
     }
 }

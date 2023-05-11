@@ -1,23 +1,6 @@
 #include "tcp.h"
 
-static void receive_file(const char *save_dir, int client_sock)
-{
-    // Recibir el nombre y del archivo que el cliente desea enviar
-    char filename[256];
-    tcp_recv(client_sock, filename, sizeof(filename));
-    char *header = strtok(filename, ":");
-    char *file_size_str = strtok(NULL, ":");
-    size_t file_size = atoi(file_size_str);
-    printf("Solicitando archivo: %s (%zu bytes)\n", header, file_size);
-
-    // Recibir y Guardar archivo
-    char filepath[512];
-    snprintf(filepath, sizeof(filepath), "%s%s", save_dir, filename);
-    tcp_recvfile(client_sock, filepath, file_size);
-
-    // Cerrar conexión
-    tcp_close(client_sock);
-}
+static void receive_file(const char *save_dir, int client_sock);
 
 int main(void)
 {
@@ -54,4 +37,23 @@ int main(void)
     }
 
     return 0;
+}
+
+static void receive_file(const char *save_dir, int client_sock)
+{
+    // Recibir el nombre y del archivo que el cliente desea enviar
+    char filename[256];
+    tcp_recv(client_sock, filename, sizeof(filename));
+    char *header = strtok(filename, ":");
+    char *file_size_str = strtok(NULL, ":");
+    size_t file_size = atoi(file_size_str);
+    printf("Solicitando archivo: %s (%zu bytes)\n", header, file_size);
+
+    // Recibir y Guardar archivo
+    char filepath[512];
+    snprintf(filepath, sizeof(filepath), "%s%s", save_dir, filename);
+    tcp_recvfile(client_sock, filepath, file_size);
+
+    // Cerrar conexión
+    tcp_close(client_sock);
 }
