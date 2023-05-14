@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/encrypt.dir/src/encrypt.c.o CMakeFiles/encrypt.dir/src/crypto.c.o CMakeFiles/encrypt.dir/src/util.c.o -o encrypt  _deps/sodium-build/libsodium.a 

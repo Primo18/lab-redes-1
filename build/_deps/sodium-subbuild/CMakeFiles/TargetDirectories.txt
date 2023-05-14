@@ -1,0 +1,3 @@
+/home/kali/Desktop/redes/lab-redes-1/build/_deps/sodium-subbuild/CMakeFiles/sodium-populate.dir
+/home/kali/Desktop/redes/lab-redes-1/build/_deps/sodium-subbuild/CMakeFiles/edit_cache.dir
+/home/kali/Desktop/redes/lab-redes-1/build/_deps/sodium-subbuild/CMakeFiles/rebuild_cache.dir

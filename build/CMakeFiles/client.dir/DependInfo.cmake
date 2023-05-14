@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/kali/Desktop/redes/lab-redes-1/src/client.c" "CMakeFiles/client.dir/src/client.c.o" "gcc" "CMakeFiles/client.dir/src/client.c.o.d"
+  "/home/kali/Desktop/redes/lab-redes-1/src/hash.c" "CMakeFiles/client.dir/src/hash.c.o" "gcc" "CMakeFiles/client.dir/src/hash.c.o.d"
   "/home/kali/Desktop/redes/lab-redes-1/src/tcp.c" "CMakeFiles/client.dir/src/tcp.c.o" "gcc" "CMakeFiles/client.dir/src/tcp.c.o.d"
   )
 

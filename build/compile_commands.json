@@ -11,6 +11,11 @@
 },
 {
   "directory": "/home/kali/Desktop/redes/lab-redes-1/build",
+  "command": "/usr/bin/cc  -I/home/kali/Desktop/redes/lab-redes-1/include -std=gnu11 -o CMakeFiles/server.dir/src/hash.c.o -c /home/kali/Desktop/redes/lab-redes-1/src/hash.c",
+  "file": "/home/kali/Desktop/redes/lab-redes-1/src/hash.c"
+},
+{
+  "directory": "/home/kali/Desktop/redes/lab-redes-1/build",
   "command": "/usr/bin/cc  -I/home/kali/Desktop/redes/lab-redes-1/include -std=gnu11 -o CMakeFiles/client.dir/src/client.c.o -c /home/kali/Desktop/redes/lab-redes-1/src/client.c",
   "file": "/home/kali/Desktop/redes/lab-redes-1/src/client.c"
 },
@@ -18,5 +23,55 @@
   "directory": "/home/kali/Desktop/redes/lab-redes-1/build",
   "command": "/usr/bin/cc  -I/home/kali/Desktop/redes/lab-redes-1/include -std=gnu11 -o CMakeFiles/client.dir/src/tcp.c.o -c /home/kali/Desktop/redes/lab-redes-1/src/tcp.c",
   "file": "/home/kali/Desktop/redes/lab-redes-1/src/tcp.c"
+},
+{
+  "directory": "/home/kali/Desktop/redes/lab-redes-1/build",
+  "command": "/usr/bin/cc  -I/home/kali/Desktop/redes/lab-redes-1/include -std=gnu11 -o CMakeFiles/client.dir/src/hash.c.o -c /home/kali/Desktop/redes/lab-redes-1/src/hash.c",
+  "file": "/home/kali/Desktop/redes/lab-redes-1/src/hash.c"
+},
+{
+  "directory": "/home/kali/Desktop/redes/lab-redes-1/build",
+  "command": "/usr/bin/cc -DSODIUM_STATIC -I/home/kali/Desktop/redes/lab-redes-1/include -I/home/kali/Desktop/redes/lab-redes-1/build/_deps/sodium-src/libsodium/src/libsodium/include -std=gnu11 -o CMakeFiles/keygen.dir/src/keygen.c.o -c /home/kali/Desktop/redes/lab-redes-1/src/keygen.c",
+  "file": "/home/kali/Desktop/redes/lab-redes-1/src/keygen.c"
+},
+{
+  "directory": "/home/kali/Desktop/redes/lab-redes-1/build",
+  "command": "/usr/bin/cc -DSODIUM_STATIC -I/home/kali/Desktop/redes/lab-redes-1/include -I/home/kali/Desktop/redes/lab-redes-1/build/_deps/sodium-src/libsodium/src/libsodium/include -std=gnu11 -o CMakeFiles/keygen.dir/src/crypto.c.o -c /home/kali/Desktop/redes/lab-redes-1/src/crypto.c",
+  "file": "/home/kali/Desktop/redes/lab-redes-1/src/crypto.c"
+},
+{
+  "directory": "/home/kali/Desktop/redes/lab-redes-1/build",
+  "command": "/usr/bin/cc -DSODIUM_STATIC -I/home/kali/Desktop/redes/lab-redes-1/include -I/home/kali/Desktop/redes/lab-redes-1/build/_deps/sodium-src/libsodium/src/libsodium/include -std=gnu11 -o CMakeFiles/keygen.dir/src/util.c.o -c /home/kali/Desktop/redes/lab-redes-1/src/util.c",
+  "file": "/home/kali/Desktop/redes/lab-redes-1/src/util.c"
+},
+{
+  "directory": "/home/kali/Desktop/redes/lab-redes-1/build",
+  "command": "/usr/bin/cc -DSODIUM_STATIC -I/home/kali/Desktop/redes/lab-redes-1/include -I/home/kali/Desktop/redes/lab-redes-1/build/_deps/sodium-src/libsodium/src/libsodium/include -std=gnu11 -o CMakeFiles/encrypt.dir/src/encrypt.c.o -c /home/kali/Desktop/redes/lab-redes-1/src/encrypt.c",
+  "file": "/home/kali/Desktop/redes/lab-redes-1/src/encrypt.c"
+},
+{
+  "directory": "/home/kali/Desktop/redes/lab-redes-1/build",
+  "command": "/usr/bin/cc -DSODIUM_STATIC -I/home/kali/Desktop/redes/lab-redes-1/include -I/home/kali/Desktop/redes/lab-redes-1/build/_deps/sodium-src/libsodium/src/libsodium/include -std=gnu11 -o CMakeFiles/encrypt.dir/src/crypto.c.o -c /home/kali/Desktop/redes/lab-redes-1/src/crypto.c",
+  "file": "/home/kali/Desktop/redes/lab-redes-1/src/crypto.c"
+},
+{
+  "directory": "/home/kali/Desktop/redes/lab-redes-1/build",
+  "command": "/usr/bin/cc -DSODIUM_STATIC -I/home/kali/Desktop/redes/lab-redes-1/include -I/home/kali/Desktop/redes/lab-redes-1/build/_deps/sodium-src/libsodium/src/libsodium/include -std=gnu11 -o CMakeFiles/encrypt.dir/src/util.c.o -c /home/kali/Desktop/redes/lab-redes-1/src/util.c",
+  "file": "/home/kali/Desktop/redes/lab-redes-1/src/util.c"
+},
+{
+  "directory": "/home/kali/Desktop/redes/lab-redes-1/build",
+  "command": "/usr/bin/cc -DSODIUM_STATIC -I/home/kali/Desktop/redes/lab-redes-1/include -I/home/kali/Desktop/redes/lab-redes-1/build/_deps/sodium-src/libsodium/src/libsodium/include -std=gnu11 -o CMakeFiles/decrypt.dir/src/decrypt.c.o -c /home/kali/Desktop/redes/lab-redes-1/src/decrypt.c",
+  "file": "/home/kali/Desktop/redes/lab-redes-1/src/decrypt.c"
+},
+{
+  "directory": "/home/kali/Desktop/redes/lab-redes-1/build",
+  "command": "/usr/bin/cc -DSODIUM_STATIC -I/home/kali/Desktop/redes/lab-redes-1/include -I/home/kali/Desktop/redes/lab-redes-1/build/_deps/sodium-src/libsodium/src/libsodium/include -std=gnu11 -o CMakeFiles/decrypt.dir/src/crypto.c.o -c /home/kali/Desktop/redes/lab-redes-1/src/crypto.c",
+  "file": "/home/kali/Desktop/redes/lab-redes-1/src/crypto.c"
+},
+{
+  "directory": "/home/kali/Desktop/redes/lab-redes-1/build",
+  "command": "/usr/bin/cc -DSODIUM_STATIC -I/home/kali/Desktop/redes/lab-redes-1/include -I/home/kali/Desktop/redes/lab-redes-1/build/_deps/sodium-src/libsodium/src/libsodium/include -std=gnu11 -o CMakeFiles/decrypt.dir/src/util.c.o -c /home/kali/Desktop/redes/lab-redes-1/src/util.c",
+  "file": "/home/kali/Desktop/redes/lab-redes-1/src/util.c"
 }
 ]

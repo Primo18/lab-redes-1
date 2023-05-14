@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/keygen.dir/src/keygen.c.o CMakeFiles/keygen.dir/src/crypto.c.o CMakeFiles/keygen.dir/src/util.c.o -o keygen  _deps/sodium-build/libsodium.a 

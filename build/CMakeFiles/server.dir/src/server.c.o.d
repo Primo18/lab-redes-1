@@ -83,4 +83,12 @@ CMakeFiles/server.dir/src/server.c.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_stat.h /usr/include/errno.h \
  /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
  /usr/include/x86_64-linux-gnu/asm/errno.h \
- /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /home/kali/Desktop/redes/lab-redes-1/include/hash.h \
+ /usr/include/openssl/sha.h /usr/include/openssl/macros.h \
+ /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
+ /usr/include/x86_64-linux-gnu/openssl/configuration.h \
+ /usr/include/openssl/opensslv.h /usr/include/openssl/e_os2.h \
+ /usr/include/inttypes.h \
+ /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h

@@ -1,1 +1,1 @@
-/usr/bin/cc CMakeFiles/server.dir/src/server.c.o CMakeFiles/server.dir/src/tcp.c.o -o server 
+/usr/bin/cc CMakeFiles/server.dir/src/server.c.o CMakeFiles/server.dir/src/tcp.c.o CMakeFiles/server.dir/src/hash.c.o -o server  /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 

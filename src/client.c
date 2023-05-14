@@ -1,6 +1,7 @@
 #include "tcp.h"
+#include "hash.h"
 
-#define FILENAME "paisaje.jpg"
+#define FILENAME "archivo.txt.enc"
 #define SERVER_PORT 10000
 
 static void send_file(const char *filepath, int sock)
@@ -43,9 +44,15 @@ int main(void)
     // Construir la ruta completa al archivo
     char filepath[512];
     snprintf(filepath, sizeof(filepath), "%s%s", save_dir, FILENAME);
-
     // Enviar archivo
     send_file(filepath, client.sock);
+
+    // calcular hash
+    unsigned char hash[SHA256_DIGEST_LENGTH];
+    calculate_sha256(filepath, hash);
+
+    // enviar hash para verificacion
+    tcp_send(client.sock, hash, SHA256_DIGEST_LENGTH);
 
     // Cerrar conexión
     tcp_close(client.sock);

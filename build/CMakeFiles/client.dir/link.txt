@@ -1,1 +1,1 @@
-/usr/bin/cc CMakeFiles/client.dir/src/client.c.o CMakeFiles/client.dir/src/tcp.c.o -o client 
+/usr/bin/cc CMakeFiles/client.dir/src/client.c.o CMakeFiles/client.dir/src/tcp.c.o CMakeFiles/client.dir/src/hash.c.o -o client  /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 

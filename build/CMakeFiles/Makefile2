@@ -65,16 +65,39 @@ CMAKE_BINARY_DIR = /home/kali/Desktop/redes/lab-redes-1/build
 # The main recursive "all" target.
 all: CMakeFiles/server.dir/all
 all: CMakeFiles/client.dir/all
+all: CMakeFiles/keygen.dir/all
+all: CMakeFiles/encrypt.dir/all
+all: CMakeFiles/decrypt.dir/all
+all: _deps/sodium-build/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: _deps/sodium-build/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/server.dir/clean
 clean: CMakeFiles/client.dir/clean
+clean: CMakeFiles/keygen.dir/clean
+clean: CMakeFiles/encrypt.dir/clean
+clean: CMakeFiles/decrypt.dir/clean
+clean: _deps/sodium-build/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory _deps/sodium-build
+
+# Recursive "all" directory target.
+_deps/sodium-build/all: _deps/sodium-build/CMakeFiles/sodium.dir/all
+.PHONY : _deps/sodium-build/all
+
+# Recursive "preinstall" directory target.
+_deps/sodium-build/preinstall:
+.PHONY : _deps/sodium-build/preinstall
+
+# Recursive "clean" directory target.
+_deps/sodium-build/clean: _deps/sodium-build/CMakeFiles/sodium.dir/clean
+.PHONY : _deps/sodium-build/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/server.dir
@@ -83,7 +106,7 @@ clean: CMakeFiles/client.dir/clean
 CMakeFiles/server.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles --progress-num=4,5,6 "Built target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles --progress-num=13,14,15 "Built target server"
 .PHONY : CMakeFiles/server.dir/all
 
 # Build rule for subdir invocation for target.
@@ -127,6 +150,110 @@ client: CMakeFiles/client.dir/rule
 CMakeFiles/client.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/clean
 .PHONY : CMakeFiles/client.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/keygen.dir
+
+# All Build rule for target.
+CMakeFiles/keygen.dir/all: _deps/sodium-build/CMakeFiles/sodium.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles --progress-num=10,11,12 "Built target keygen"
+.PHONY : CMakeFiles/keygen.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/keygen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles 88
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/keygen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles 0
+.PHONY : CMakeFiles/keygen.dir/rule
+
+# Convenience name for target.
+keygen: CMakeFiles/keygen.dir/rule
+.PHONY : keygen
+
+# clean rule for target.
+CMakeFiles/keygen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/clean
+.PHONY : CMakeFiles/keygen.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/encrypt.dir
+
+# All Build rule for target.
+CMakeFiles/encrypt.dir/all: _deps/sodium-build/CMakeFiles/sodium.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encrypt.dir/build.make CMakeFiles/encrypt.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encrypt.dir/build.make CMakeFiles/encrypt.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles --progress-num=7,8,9 "Built target encrypt"
+.PHONY : CMakeFiles/encrypt.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/encrypt.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles 88
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/encrypt.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles 0
+.PHONY : CMakeFiles/encrypt.dir/rule
+
+# Convenience name for target.
+encrypt: CMakeFiles/encrypt.dir/rule
+.PHONY : encrypt
+
+# clean rule for target.
+CMakeFiles/encrypt.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encrypt.dir/build.make CMakeFiles/encrypt.dir/clean
+.PHONY : CMakeFiles/encrypt.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/decrypt.dir
+
+# All Build rule for target.
+CMakeFiles/decrypt.dir/all: _deps/sodium-build/CMakeFiles/sodium.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/decrypt.dir/build.make CMakeFiles/decrypt.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/decrypt.dir/build.make CMakeFiles/decrypt.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles --progress-num=4,5,6 "Built target decrypt"
+.PHONY : CMakeFiles/decrypt.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/decrypt.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles 88
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/decrypt.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles 0
+.PHONY : CMakeFiles/decrypt.dir/rule
+
+# Convenience name for target.
+decrypt: CMakeFiles/decrypt.dir/rule
+.PHONY : decrypt
+
+# clean rule for target.
+CMakeFiles/decrypt.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/decrypt.dir/build.make CMakeFiles/decrypt.dir/clean
+.PHONY : CMakeFiles/decrypt.dir/clean
+
+#=============================================================================
+# Target rules for target _deps/sodium-build/CMakeFiles/sodium.dir
+
+# All Build rule for target.
+_deps/sodium-build/CMakeFiles/sodium.dir/all:
+	$(MAKE) $(MAKESILENT) -f _deps/sodium-build/CMakeFiles/sodium.dir/build.make _deps/sodium-build/CMakeFiles/sodium.dir/depend
+	$(MAKE) $(MAKESILENT) -f _deps/sodium-build/CMakeFiles/sodium.dir/build.make _deps/sodium-build/CMakeFiles/sodium.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles --progress-num=16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target sodium"
+.PHONY : _deps/sodium-build/CMakeFiles/sodium.dir/all
+
+# Build rule for subdir invocation for target.
+_deps/sodium-build/CMakeFiles/sodium.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles 85
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sodium-build/CMakeFiles/sodium.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles 0
+.PHONY : _deps/sodium-build/CMakeFiles/sodium.dir/rule
+
+# Convenience name for target.
+sodium: _deps/sodium-build/CMakeFiles/sodium.dir/rule
+.PHONY : sodium
+
+# clean rule for target.
+_deps/sodium-build/CMakeFiles/sodium.dir/clean:
+	$(MAKE) $(MAKESILENT) -f _deps/sodium-build/CMakeFiles/sodium.dir/build.make _deps/sodium-build/CMakeFiles/sodium.dir/clean
+.PHONY : _deps/sodium-build/CMakeFiles/sodium.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

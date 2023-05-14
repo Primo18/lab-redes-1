@@ -1,5 +1,5 @@
 #include "tcp.h"
-#define BUFFER_SIZE 4096
+#define BUFFER_SIZE 1024
 
 void tcp_server_create(struct tcp_server_t *server, int port)
 {
@@ -151,7 +151,7 @@ void tcp_sendfile(int sock, const char *file)
 
         bytes_sent += bytes_read;
 
-        // Muestra el porcentaje de bytes enviados
+        //Muestra el porcentaje de bytes enviados
         printf("\r[%3.2f%%] Enviando archivo...", 100.0 * bytes_sent / size);
         fflush(stdout);
 
@@ -181,11 +181,11 @@ void tcp_recvfile(int sock, const char *file, size_t size)
     while (bytes_left > 0)
     {
         size_t bytes_to_read = BUFFER_SIZE;
-        if (bytes_left < BUFFER_SIZE)
+        if (bytes_left < bytes_to_read)
         {
             bytes_to_read = bytes_left;
         }
-
+        //posible erroe en recv**
         ssize_t bytes_read = recv(sock, buffer, bytes_to_read, 0);
         if (bytes_read == -1)
         {
@@ -198,6 +198,11 @@ void tcp_recvfile(int sock, const char *file, size_t size)
             printf("\nConexión cerrada por el servidor\n");
             fclose(fp);
             return;
+        }
+        // Verificar si el tamaño del paquete recibido coincide con el tamaño esperado
+        if (bytes_read != bytes_to_read)
+        {
+            printf("Tamaño de paquete recibido (%zu bytes) no coincide con el tamaño esperado (%zu bytes).\n", bytes_read, bytes_to_read);
         }
 
         size_t bytes_written = fwrite(buffer, sizeof(char), bytes_read, fp);

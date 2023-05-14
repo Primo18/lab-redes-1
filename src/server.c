@@ -1,4 +1,5 @@
 #include "tcp.h"
+#include "hash.h"
 
 static void receive_file(const char *save_dir, int client_sock);
 
@@ -53,6 +54,14 @@ static void receive_file(const char *save_dir, int client_sock)
     char filepath[512];
     snprintf(filepath, sizeof(filepath), "%s%s", save_dir, filename);
     tcp_recvfile(client_sock, filepath, file_size);
+
+    // calcular hash
+    unsigned char hash[SHA256_DIGEST_LENGTH];
+    calculate_sha256(filepath, hash);
+    // recibir hash y comparar
+    unsigned char last_hash[SHA256_DIGEST_LENGTH];
+    tcp_recv(client_sock, last_hash, SHA256_DIGEST_LENGTH);
+    compare_hashes(hash, last_hash);
 
     // Cerrar conexión
     tcp_close(client_sock);

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/client.dir/src/client.c.o"
   "CMakeFiles/client.dir/src/client.c.o.d"
+  "CMakeFiles/client.dir/src/hash.c.o"
+  "CMakeFiles/client.dir/src/hash.c.o.d"
   "CMakeFiles/client.dir/src/tcp.c.o"
   "CMakeFiles/client.dir/src/tcp.c.o.d"
   "client"

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/server.dir/src/hash.c.o"
+  "CMakeFiles/server.dir/src/hash.c.o.d"
   "CMakeFiles/server.dir/src/server.c.o"
   "CMakeFiles/server.dir/src/server.c.o.d"
   "CMakeFiles/server.dir/src/tcp.c.o"

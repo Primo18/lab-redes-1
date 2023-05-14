@@ -1,4 +1,10 @@
 /home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles/server.dir
 /home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles/client.dir
+/home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles/keygen.dir
+/home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles/encrypt.dir
+/home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles/decrypt.dir
 /home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles/edit_cache.dir
 /home/kali/Desktop/redes/lab-redes-1/build/CMakeFiles/rebuild_cache.dir
+/home/kali/Desktop/redes/lab-redes-1/build/_deps/sodium-build/CMakeFiles/sodium.dir
+/home/kali/Desktop/redes/lab-redes-1/build/_deps/sodium-build/CMakeFiles/edit_cache.dir
+/home/kali/Desktop/redes/lab-redes-1/build/_deps/sodium-build/CMakeFiles/rebuild_cache.dir

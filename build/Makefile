@@ -142,6 +142,58 @@ client/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
 .PHONY : client/fast
 
+#=============================================================================
+# Target rules for targets named keygen
+
+# Build rule for target.
+keygen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 keygen
+.PHONY : keygen
+
+# fast build rule for target.
+keygen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/build
+.PHONY : keygen/fast
+
+#=============================================================================
+# Target rules for targets named encrypt
+
+# Build rule for target.
+encrypt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 encrypt
+.PHONY : encrypt
+
+# fast build rule for target.
+encrypt/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encrypt.dir/build.make CMakeFiles/encrypt.dir/build
+.PHONY : encrypt/fast
+
+#=============================================================================
+# Target rules for targets named decrypt
+
+# Build rule for target.
+decrypt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 decrypt
+.PHONY : decrypt
+
+# fast build rule for target.
+decrypt/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/decrypt.dir/build.make CMakeFiles/decrypt.dir/build
+.PHONY : decrypt/fast
+
+#=============================================================================
+# Target rules for targets named sodium
+
+# Build rule for target.
+sodium: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sodium
+.PHONY : sodium
+
+# fast build rule for target.
+sodium/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/sodium-build/CMakeFiles/sodium.dir/build.make _deps/sodium-build/CMakeFiles/sodium.dir/build
+.PHONY : sodium/fast
+
 src/client.o: src/client.c.o
 .PHONY : src/client.o
 
@@ -165,6 +217,135 @@ src/client.s: src/client.c.s
 src/client.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client.c.s
 .PHONY : src/client.c.s
+
+src/crypto.o: src/crypto.c.o
+.PHONY : src/crypto.o
+
+# target to build an object file
+src/crypto.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/src/crypto.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encrypt.dir/build.make CMakeFiles/encrypt.dir/src/crypto.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/decrypt.dir/build.make CMakeFiles/decrypt.dir/src/crypto.c.o
+.PHONY : src/crypto.c.o
+
+src/crypto.i: src/crypto.c.i
+.PHONY : src/crypto.i
+
+# target to preprocess a source file
+src/crypto.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/src/crypto.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encrypt.dir/build.make CMakeFiles/encrypt.dir/src/crypto.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/decrypt.dir/build.make CMakeFiles/decrypt.dir/src/crypto.c.i
+.PHONY : src/crypto.c.i
+
+src/crypto.s: src/crypto.c.s
+.PHONY : src/crypto.s
+
+# target to generate assembly for a file
+src/crypto.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/src/crypto.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encrypt.dir/build.make CMakeFiles/encrypt.dir/src/crypto.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/decrypt.dir/build.make CMakeFiles/decrypt.dir/src/crypto.c.s
+.PHONY : src/crypto.c.s
+
+src/decrypt.o: src/decrypt.c.o
+.PHONY : src/decrypt.o
+
+# target to build an object file
+src/decrypt.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/decrypt.dir/build.make CMakeFiles/decrypt.dir/src/decrypt.c.o
+.PHONY : src/decrypt.c.o
+
+src/decrypt.i: src/decrypt.c.i
+.PHONY : src/decrypt.i
+
+# target to preprocess a source file
+src/decrypt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/decrypt.dir/build.make CMakeFiles/decrypt.dir/src/decrypt.c.i
+.PHONY : src/decrypt.c.i
+
+src/decrypt.s: src/decrypt.c.s
+.PHONY : src/decrypt.s
+
+# target to generate assembly for a file
+src/decrypt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/decrypt.dir/build.make CMakeFiles/decrypt.dir/src/decrypt.c.s
+.PHONY : src/decrypt.c.s
+
+src/encrypt.o: src/encrypt.c.o
+.PHONY : src/encrypt.o
+
+# target to build an object file
+src/encrypt.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encrypt.dir/build.make CMakeFiles/encrypt.dir/src/encrypt.c.o
+.PHONY : src/encrypt.c.o
+
+src/encrypt.i: src/encrypt.c.i
+.PHONY : src/encrypt.i
+
+# target to preprocess a source file
+src/encrypt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encrypt.dir/build.make CMakeFiles/encrypt.dir/src/encrypt.c.i
+.PHONY : src/encrypt.c.i
+
+src/encrypt.s: src/encrypt.c.s
+.PHONY : src/encrypt.s
+
+# target to generate assembly for a file
+src/encrypt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encrypt.dir/build.make CMakeFiles/encrypt.dir/src/encrypt.c.s
+.PHONY : src/encrypt.c.s
+
+src/hash.o: src/hash.c.o
+.PHONY : src/hash.o
+
+# target to build an object file
+src/hash.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/hash.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/hash.c.o
+.PHONY : src/hash.c.o
+
+src/hash.i: src/hash.c.i
+.PHONY : src/hash.i
+
+# target to preprocess a source file
+src/hash.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/hash.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/hash.c.i
+.PHONY : src/hash.c.i
+
+src/hash.s: src/hash.c.s
+.PHONY : src/hash.s
+
+# target to generate assembly for a file
+src/hash.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/hash.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/hash.c.s
+.PHONY : src/hash.c.s
+
+src/keygen.o: src/keygen.c.o
+.PHONY : src/keygen.o
+
+# target to build an object file
+src/keygen.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/src/keygen.c.o
+.PHONY : src/keygen.c.o
+
+src/keygen.i: src/keygen.c.i
+.PHONY : src/keygen.i
+
+# target to preprocess a source file
+src/keygen.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/src/keygen.c.i
+.PHONY : src/keygen.c.i
+
+src/keygen.s: src/keygen.c.s
+.PHONY : src/keygen.s
+
+# target to generate assembly for a file
+src/keygen.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/src/keygen.c.s
+.PHONY : src/keygen.c.s
 
 src/server.o: src/server.c.o
 .PHONY : src/server.o
@@ -217,6 +398,36 @@ src/tcp.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/tcp.c.s
 .PHONY : src/tcp.c.s
 
+src/util.o: src/util.c.o
+.PHONY : src/util.o
+
+# target to build an object file
+src/util.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/src/util.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encrypt.dir/build.make CMakeFiles/encrypt.dir/src/util.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/decrypt.dir/build.make CMakeFiles/decrypt.dir/src/util.c.o
+.PHONY : src/util.c.o
+
+src/util.i: src/util.c.i
+.PHONY : src/util.i
+
+# target to preprocess a source file
+src/util.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/src/util.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encrypt.dir/build.make CMakeFiles/encrypt.dir/src/util.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/decrypt.dir/build.make CMakeFiles/decrypt.dir/src/util.c.i
+.PHONY : src/util.c.i
+
+src/util.s: src/util.c.s
+.PHONY : src/util.s
+
+# target to generate assembly for a file
+src/util.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/src/util.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encrypt.dir/build.make CMakeFiles/encrypt.dir/src/util.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/decrypt.dir/build.make CMakeFiles/decrypt.dir/src/util.c.s
+.PHONY : src/util.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -226,16 +437,38 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... client"
+	@echo "... decrypt"
+	@echo "... encrypt"
+	@echo "... keygen"
 	@echo "... server"
+	@echo "... sodium"
 	@echo "... src/client.o"
 	@echo "... src/client.i"
 	@echo "... src/client.s"
+	@echo "... src/crypto.o"
+	@echo "... src/crypto.i"
+	@echo "... src/crypto.s"
+	@echo "... src/decrypt.o"
+	@echo "... src/decrypt.i"
+	@echo "... src/decrypt.s"
+	@echo "... src/encrypt.o"
+	@echo "... src/encrypt.i"
+	@echo "... src/encrypt.s"
+	@echo "... src/hash.o"
+	@echo "... src/hash.i"
+	@echo "... src/hash.s"
+	@echo "... src/keygen.o"
+	@echo "... src/keygen.i"
+	@echo "... src/keygen.s"
 	@echo "... src/server.o"
 	@echo "... src/server.i"
 	@echo "... src/server.s"
 	@echo "... src/tcp.o"
 	@echo "... src/tcp.i"
 	@echo "... src/tcp.s"
+	@echo "... src/util.o"
+	@echo "... src/util.i"
+	@echo "... src/util.s"
 .PHONY : help
 
 
