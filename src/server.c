@@ -42,7 +42,7 @@ int main(void)
 
 static void receive_file(const char *save_dir, int client_sock)
 {
-    // Recibir el nombre y del archivo que el cliente desea enviar
+    // Recibir el nombre y tamaño del archivo que el cliente desea enviar
     char filename[256];
     tcp_recv(client_sock, filename, sizeof(filename));
     char *header = strtok(filename, ":");

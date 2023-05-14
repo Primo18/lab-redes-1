@@ -71,7 +71,7 @@ Para ejecutar el cliente, se debe ejecutar el siguiente comando:
 $ ./client
 ```
 
-Antes de empezar con el cifrado y descifrado y la transferencia de archivo7, se debe generar una llave secreta. 
+Antes de empezar con el cifrado y descifrado y la transferencia de archivos, se debe generar una llave secreta. 
 
 ```console
 $ ./keygen llave.key
