@@ -1,12 +1,16 @@
 # Transferencia de archivos en TCP con cifrado simétrico
 
 ## Descripción
-El proyecto transfiere archivos entre un cliente y un servidor usando el protocolo TCP. El servidor escucha en el puerto 10000 y espera conexiones de clientes. Una vez que un cliente se conecta, el servidor recibe un archivo y lo guarda en el directorio `archivos-servidor`. El cliente envia archivos desde el directorio `archivos-cliente`.
-Se comprueba la integridad de los archivos usando el algoritmo MD5.
-Se usa cifrado simétrico para cifrar y descifrar los archivos.
-Se muestra el progreso de la transferencia de archivos en el cliente y en el servidor.
-Se puede transferir cualquier tipo de archivo.
-Si se desea cambiar el archivo a transferir, se debe cambiar el nombre del archivo en el cliente:
+* El proyecto transfiere archivos entre un cliente y un servidor usando el protocolo TCP. 
+* El servidor escucha en el puerto 10000 y espera conexiones de clientes. 
+* Una vez que un cliente se conecta, el servidor recibe un archivo y lo guarda en el directorio `archivos-servidor`. 
+* El cliente envia archivos desde el directorio `archivos-cliente`.
+* Se comprueba la integridad de los archivos usando el algoritmo MD5.
+* Se usa cifrado simétrico para cifrar y descifrar los archivos.
+* Se muestra el progreso de la transferencia de archivos en el cliente y en el servidor.
+* Se puede transferir cualquier tipo de archivo.
+
+### Si se desea cambiar el archivo a transferir, se debe cambiar el nombre del archivo en el cliente:
 ```console
 # Abrir el archivo cliente.c
 $ nano cliente.c
@@ -67,7 +71,7 @@ Para ejecutar el cliente, se debe ejecutar el siguiente comando:
 $ ./client
 ```
 
-Antes de empezar con el cifrado y descifrado, se debe generar una llave secreta. 
+Antes de empezar con el cifrado y descifrado y la transferencia de archivo7, se debe generar una llave secreta. 
 
 ```console
 $ ./keygen llave.key
